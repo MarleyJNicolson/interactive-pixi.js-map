@@ -29,13 +29,13 @@ export default {
     script: [
       {
         hid: 'gtm-script',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-GWF9EE9GP9',
+        src: 'https://www.googletagmanager.com/gtag/js?id=key',
         async: true
       },
       {
         hid: 'gtm-script2',
         innerHTML: `
-        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GWF9EE9GP9');
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'key');
         `
       },
       {
@@ -103,8 +103,8 @@ export default {
         host: 'smtp.gmail.com',
         port: 465,
         auth: {
-          user: 'phil.longhurst@onqor.co.uk',
-          pass: 'gppddnykogzcdbya'
+          user: 'user',
+          pass: 'key'
         },
       },
     }],
