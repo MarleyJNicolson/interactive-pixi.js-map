@@ -1,0 +1,25 @@
+.onqor-input{
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // padding: 14px 20px;
+    // gap: 10px;
+    // height: 48px;
+    max-width: 378px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.16), -10px 10px 12px 5px rgba(0, 0, 0, 0.1), inset -35px 35px 48px rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    padding: 14px 20px 14px 20px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    transition: box-shadow 0.3s, transform 0.3s;
+    &:hover {
+        box-shadow: -3px 4px 5px -1px rgb(0 0 0 / 16%), -5px 5px 15px 3px rgb(0 0 0 / 7%), inset 0px 0px 14px rgb(0 0 0 / 3%), inset -35px 35px 48px rgb(0 0 0 / 1%);
+        transition: box-shadow 0.3s, transform 0.3s;
+        transform: translateY(2px);
+    }
+}   

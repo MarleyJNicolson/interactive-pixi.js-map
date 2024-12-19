@@ -1,0 +1,180 @@
+.subscription{
+    max-width: 941px; 
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 75px;
+    &.stop-scrolling {
+        overflow: hidden;
+    }
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 44px auto 0;
+        width: fit-content;
+        @media (min-width: 960px){
+            min-width: 700px;
+        }
+        @media (max-width: 960px){
+            justify-content: center;
+        }
+        div {
+            width: 75%;
+            @media (max-width: 960px){
+                width: 100%;
+            }
+        }
+        input{
+            margin-right: 28px;
+        }
+        .onqor-input {
+            width: 100%;
+            @media (max-width: 960px){
+                width: 100%;
+            }
+        }
+        .onqor-button {
+            width: 20%;
+            @media (max-width: 960px){
+                width: 35%;
+                margin-top: 20px;
+            }
+        }
+    }
+    &__sub{
+        text-align: center;
+        margin-bottom: 44px;
+        p{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #07134D;
+        }
+    }
+    p{
+        text-align: center;
+    }
+    form{
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+    }
+    #mce-responses{
+        position: absolute;
+    }
+    #mce-EMAIL{
+        max-width: 378px;
+        width: 100%;
+        height: 48px;
+        background: #FFFFFF;
+        box-shadow: -3px 4px 5px -1px rgb(0 0 0 / 16%), -10px 10px 12px 5px rgb(0 0 0 / 10%), inset -35px 35px 48px rgb(0 0 0 / 2%);
+        border-radius: 10px;
+        padding: 14px 20px 14px 20px;
+        box-sizing: border-box;
+        font-weight: 400;
+        border: none;
+        color:#010203;
+        text-indent: 4% !important;
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-style: normal;
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    #mc_embed_signup div#mce-responses{
+        overflow: inherit !important;
+    }
+    #mc_embed_signup div.response {
+        position: absolute;
+        top: 50px;
+        left: -19px;
+    }
+    .mce_inline_error{
+        position: absolute;
+        bottom: -40px;
+        background-color: #ff000000 !important;
+    }
+    .helper_text{
+        position: absolute;
+    }
+    #mc_embed_signup .mc-field-group{
+        padding: 0px;
+    }
+    .mce-success-response{
+        position: absolute;
+        bottom: -40px;
+    }
+    .mc-field-group{
+        max-width: 378px;
+        width: 100%;
+        margin: 0px;
+        input{
+            position: relative;
+            bottom: 0px;
+            &:focus{
+                border: solid 2px #FFCA76;
+                outline: none;
+            }
+        }
+    }
+    // #mc_embed_signup form{
+    //     margin: 0px;
+    // }
+    #mc_embed_signup{
+        width: 100% !important;
+    }
+    #mc_embed_signup .button{
+        // padding: 15px 0px;
+        width: 136px;
+        height: 48px;
+        box-shadow: -3px 4px 5px -1px rgb(0 0 0 / 16%), -10px 10px 12px 5px rgb(0 0 0 / 10%), inset -35px 35px 48px rgb(0 0 0 / 2%);
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        transform: translateY(0px);
+        transition: box-shadow 0.7s, transform 0.7s;
+        background-color: #fff;
+        color: #010203;
+        font-family: montserrat, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0px;
+        padding: 0px;
+        &::-webkit-input-placeholder{
+            font-family: montserrat, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:#020304;
+        }
+        &:hover{
+            background-color: #fff;
+            box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.16), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -35px 35px 48px rgba(0, 0, 0, 0.01);
+            transform: translateY(5px);
+            transition: box-shadow 0.35s , transform 0.35s;
+        }
+    }
+    .optionalParent{
+        width: 136px;
+        height: 48px;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+	/*Big smartphones [426px -> 600px]*/
+    .subscription form{
+        flex-direction: column;
+    }
+    .subscription__row{
+        width: 100%;
+    }
+    .subscription .optionalParent{
+        margin-top: 31px;
+    }
+}
+

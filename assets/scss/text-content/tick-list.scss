@@ -1,0 +1,45 @@
+.tick-list{
+    max-width: 944px;
+    width: 95%;
+    padding: 46px 49px;
+    margin: 40px auto 65px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.16), -10px 10px 12px 5px rgba(0, 0, 0, 0.1), inset -35px 35px 48px rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+    &__item{
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        p{
+            font-family: 'Orbitron';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #07134D;
+        }
+        svg{
+            margin-right: 20px;
+            width: 20px;
+            height: 20px;
+            path{
+                fill: #00CCD6;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 820px){
+    .tick-list{
+        flex-direction: column;
+        box-shadow: none;
+        &__item{
+            width: 100%;
+            margin-bottom: 35px;
+        }
+    }
+}

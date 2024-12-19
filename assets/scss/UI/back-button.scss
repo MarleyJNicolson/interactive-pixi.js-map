@@ -1,0 +1,23 @@
+.back-button {
+        position: absolute;
+        background-color: #07134D;
+        border: 5px solid #afcbe9;
+        border-right: none;
+        border-bottom: none;
+        border-radius: 15px 0;
+        padding: 14px 24px; 
+        right: 0%;
+        bottom: 0%;
+        color: white;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        transition: ease 0.2s;
+        &:hover {
+            transition: ease 0.2s;
+            cursor: pointer;
+            background-color: #1B05F2;
+        }
+}

@@ -1,0 +1,38 @@
+.quote{
+    max-width: 821px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 64px;
+    margin-bottom: 90px;
+    p{
+        font-family: 'Orbitron';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        /* or 31px */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(91.48deg, #1B05F2 3.24%, #07134D 94.35%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &__mark-left{
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        left:0px;
+        top:-20px;
+    }
+    &__mark-right{
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        right:0px;
+        bottom: -20px;
+    }
+}

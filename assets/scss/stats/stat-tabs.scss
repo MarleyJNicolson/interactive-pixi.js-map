@@ -1,0 +1,55 @@
+.statTabs{
+    display: flex;
+    flex-direction: row;
+    max-width: 943px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    &__item{
+        width: 268.26px;
+        height: 78.44px;
+        background: #FFFFFF;
+        box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.05), -7px 7px 12px 5px rgba(0, 0, 0, 0.04), inset -35px 35px 48px rgba(0, 0, 0, 0.02);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 11px 17px;
+    }
+    &__graph{
+        width: 55px;
+        height: 55px;
+        height: 100%;
+        margin-right: 25px;
+        display: flex;
+        align-items: center;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        vertical-align: middle;
+        justify-content: center;
+        p{
+            padding: 0px;
+            margin: 0px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            &:nth-child(1){
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+	.statTabs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__item{
+            margin: 10px 0px;
+        }
+    }
+}

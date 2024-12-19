@@ -1,0 +1,20 @@
+.onqor-button{
+    padding: 15px 0px;
+    width: min-content;
+    box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.16), -10px 10px 12px 5px rgba(0, 0, 0, 0.1), inset -35px 35px 48px rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 125px;
+    position: relative;
+    transform: translateY(0px);
+    transition: box-shadow 0.7s , transform 0.7s;
+    p{
+        margin: 0px;
+        font-size: 16px;
+    }
+    &:hover{
+        box-shadow: -3px 4px 5px -1px rgba(0, 0, 0, 0.16), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -35px 35px 48px rgba(0, 0, 0, 0.01);
+        transform: translateY(5px);
+        transition: box-shadow 0.35s , transform 0.35s;
+    }
+}

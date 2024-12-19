@@ -1,0 +1,179 @@
+.our-approach{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-top: 35px;
+    h2{
+        font-family: 'Orbitron';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        text-transform: uppercase;
+        margin-top: 95px;
+        margin-bottom: 42px;
+    }
+    &__icon-img{
+        position: absolute;
+        width: 96%;
+        height: 96%;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__section{
+        max-width: 772px;
+        width: 95%;
+        &:nth-child(even) {  
+            // transform: translateY(300px);
+            .our-approach__content{
+                flex-direction: row-reverse;
+            }
+            .our-approach__line-container .line{
+                transform: rotate(168deg);
+            }
+            .our-approach__line-cover{
+                background-color: #fff;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                right: auto !important;
+                left: 0px !important;
+            }
+        }
+    }
+    &__icon{
+        position: relative;
+        height: 202px;
+        z-index: 2;
+        width: 202px;
+        svg{
+            position: absolute;
+            top: -7px;
+            left: -8px;
+            // will-change: transform;
+        }
+    }
+    &__content{
+        height: 205px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: none;
+        justify-content: space-between;
+        .content{
+            max-width: 539px;
+            opacity: 0.0;
+            transition: all 0.7s;
+            transform: scale(1.05);
+            h3 {
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            p{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+            }
+            &.active{
+                opacity: 1;
+                transform: scale(1);
+                transition: all 0.75s;  
+            }
+        }
+    }
+    h3{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    &__line-cover{
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+    }
+    &__line-container{
+        height: 124px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        .line{
+            width: 100%;
+            height: 4px;
+            width: 598px;
+            transform: rotate(12deg);
+            outline: 0.1px solid white;
+            div{    
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: repeat-x;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .our-approach__content .content {
+        max-width: 539px;
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .our-approach__line-container .line{
+        display: none;
+    }
+    .our-approach{
+        overflow: hidden;
+    }
+    .our-approach__content .content {
+        max-width: 539px;
+        width: 60%;
+    }
+    .our-approach__section {
+        max-width: 772px;
+        width: calc(95% + 101px );
+        /* left: -101px; */
+        margin-left: -101px;
+        .our-approach__icon-img{
+            margin-left: 35px;
+        }
+        &:nth-child(even) {  
+            margin-right: -101px;
+            margin-left: 0px;
+            .our-approach__icon-img{
+                margin-left: -35px;
+            }
+        }
+    }
+    .our-approach {
+        width: calc(100% + 20px);
+        left: -10px;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 700px){
+    .our-approach{
+        &__section{
+            max-width: 772px;
+            width: calc(95% + 101px );
+            /* left: -101px; */
+            margin-left: -101px;
+            .our-approach__icon{
+                margin-left: 35px;
+                transform: translateX(-45px);
+            }
+            &:nth-child(even) {  
+                .our-approach__icon{
+                    transform: translateX(18px);
+                }
+            }
+        }
+    }
+}

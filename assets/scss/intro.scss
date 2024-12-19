@@ -1,0 +1,292 @@
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 3000;
+    overflow: hidden;
+    &__panel{
+        width: 100%;
+        height: 100%;
+    }
+    .v-progress-circular__underlay {
+        stroke: rgb(158 158 158 / 0%);
+        z-index: 1;
+    }
+    &__logo-bg{
+        position: absolute;
+        top:0px;
+        height: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(72.44deg, #00CCD6 0%, #9E00FC 100%);
+        z-index: 0;
+        // transition: width 1s;
+        // transition-delay: 5s;
+    }
+    &__white {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left: 0px;
+        background-color: white;
+        z-index: 1;
+        opacity: 0;
+    }
+    &__logo{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        position: relative;
+        z-index: 2;
+        svg{
+            z-index: 1;
+            transform: translateY(0px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    }
+    &__side-panal{
+        width: 30%;
+        height: 100%;
+        right: 0px;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 100px;
+        text-align: center;
+        h2{
+            font-family: orbitron, sans-serif !important;
+            font-weight: 500;
+            font-style: normal;
+            color:#07134D;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }   
+    &__side-panel-content{
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        pointer-events: none;
+        opacity: 0;
+        .buttons{
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            opacity: 0.0;
+            transform: translateY(45px);
+        }
+        &.active{
+            height: auto;
+            overflow: initial;
+            pointer-events: all;
+            opacity: 0;
+            .buttons{
+                opacity: 0;
+                transform: translateY(0px);
+                transition: all 0.7s;
+                transition-delay:2s;
+            }
+        }
+    }
+    .step-one{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+    .loading-bar{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        left:0px
+    }
+
+    &__logo-content{
+        position: absolute;
+        top: calc(50% + 250px);
+        opacity: 0;
+
+        @media (max-width: 375px) {
+            top: calc(50% + 200px);
+        }
+        p{
+            color:#fff;
+        }
+        .loading{
+            font-size: 32px;
+            color:#fff;
+            font-family: Orbitron;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+    }
+    .clouds{
+        width: 100vw;
+        height: 500vh;
+        // background-color: #fff;
+        position: relative;
+        transform: translateY(100%);
+        left: 0px;
+        z-index: 10;
+        // background: rgb(255,255,255);
+        // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 68%, rgba(254,255,255,0) 100%);
+        background-position: center center;
+        background-size: contain;
+        background-image: url('static/images/clouds/grouped-clouds.png');
+        
+        div {
+           position: absolute;
+           bottom: 980px;
+           width: 100vw;
+           height: 200vh;
+           background-image: url('static/images/clouds/clouds.png');
+           background-position: center center;
+           background-size: contain;
+
+           @media (max-width: 680px) {
+                bottom: 550px;
+                height: 120vh;
+            }
+
+            @media screen and (max-width: 1749px), screen and (max-height: 942px) {
+                bottom: 980px;
+            }
+
+            @media screen and (max-width: 1380px), screen and (max-height: 930px) {
+                bottom: 580px;
+            }
+
+            @media screen and (max-width: 1024px), screen and (max-height: 1024px) {
+                bottom: 100px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            height: 400vh;
+        }
+
+        @media (max-width: 680px) {
+            height: 150vh;
+            background-size: cover;
+        }
+
+        @media (max-width: 450px) {
+            height: 150vh;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: 1024px), screen and (max-height: 1024px) {
+            height: 100vh;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: 834px), screen and (max-height: 1124px) {
+            height: 100vh;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: 1024px), screen and (max-height: 768px) {
+            height: 150vh;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: 1749px), screen and (max-height: 942px) {
+            height: 500vh;
+            background-size: contain;
+        }
+
+        @media screen and (max-width: 1380px), screen and (max-height: 942px) {
+            height: 200vh;
+            background-size: contain;
+        }
+    }
+    .step-one{
+        transform: translateY(0px);
+    }
+    
+    &.step-1{
+        .intro__logo{
+            svg {
+               opacity: 1;
+               transition: opacity 1s;
+            }
+        }
+    }
+    &.step-2{
+        .intro__logo-bg{
+            width: 100%;
+            transition: width 2s;
+        }
+        .intro__logo{
+            width: 100%;
+            transition: width 2s;
+            transition-delay: 2s;
+            svg {
+                opacity: 1;
+            }
+        }
+        .intro__logo-content{
+            opacity: 1.0;
+        }
+    }
+    &.step-clouds{
+        transform: translateY(-400%);
+        transition: transform 5s;
+        transition-delay: 3s;
+        overflow: inherit;
+        .clouds{
+            transition-delay: 0.1s;
+            transition: transform 2s;
+            transform: translateY(-60%);
+        }
+        .step-one .intro__logo svg, .step-one .intro__logo.loading-bar{
+            // transform: translateY(100px);
+            // transition: transform 1s;
+        }
+        .step-one{
+          //  opacity: 0.0;
+            transition: opacity 0.5s;
+            transition-delay: 1.6s;
+        }
+        .intro__white{
+            transition: ease-in opacity 2s;
+            opacity: 1;
+        }
+    }
+}
+
+// @media only screen and (max-width: 1540px){
+//     .intro{
+
+//     }
+// }
+
+@media only screen and (max-width: 835px){
+    .drag-map__background{
+        display: none;
+    }
+}
