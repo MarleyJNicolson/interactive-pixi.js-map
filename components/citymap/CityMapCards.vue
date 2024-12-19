@@ -18,17 +18,6 @@ export default {
         ID: Number,
         blockComponent: Object,
         cardData: Array
-    },
-    data(){
-        return {
-
-        }
-    },
-    methods: {
-
-    },  
-    mounted(){
-        
     }
 }
 </script>
