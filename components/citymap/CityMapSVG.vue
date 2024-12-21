@@ -973,27 +973,17 @@
             var serviceHoverSpeed = 5;
 
             app.ServiceHoverAnimation = function(delta) {                
-                // if(ThreeTowersCont.y < 100){
-                //     ThreeTowersCont.y = ThreeTowersCont.y + serviceHoverSpeed;
-                // }
-                // if(ServiceButtonHover.y > 0){
-                //     ServiceButtonHover.y = ServiceButtonHover.y - serviceHoverSpeed;
-                // }
+        
                 
-                // setTimeout(() => {
+               
                     if(ServiceButton.alpha < 1){
                         ServiceButton.alpha = ServiceButton.alpha + 0.05;
                     }
-                // }, 500)
+          
             }
 
             app.ServiceHoverAnimationLeave = function(delta) {                
-                // if(ThreeTowersCont.y > -10){
-                //     ThreeTowersCont.y = ThreeTowersCont.y - serviceHoverSpeed;
-                // }
-                // if(ServiceButtonHover.y < 235){
-                //     ServiceButtonHover.y = ServiceButtonHover.y + serviceHoverSpeed;
-                // }
+
                 if(ServiceButton.alpha > 0){
                     ServiceButton.alpha = ServiceButton.alpha - 0.05;
                 }
@@ -1025,8 +1015,7 @@
             var singleTowerOuter = new PIXI.Sprite.from('/images/light/city_Single-outer.png');
             singleTowerCenter.anchor.set(0.5, 0.5);
             singleTowerOuter.anchor.set(0.5, 0.5);
-            // serviceDotscont.x 
-            // serviceDotscont.y 
+
 
             singleTower.x = 288.0107421875;
             singleTower.y = -40.917449951171875;
@@ -1281,17 +1270,11 @@
 
             app.singleLeaveAnim = function(){
                 
-                    // if(singleTower.y > -20 ){
-                    //     singleTower.y = singleTower.y - 5;
-                    // }
-                    // if(singleHover.y < 150){
-                    //     singleHover.y = singleHover.y + 5;
-                    // }
-                // setTimeout(() => {
+
                     if(singleButton.alpha > 0){
                         singleButton.alpha = singleButton.alpha - 0.3;
                     }
-                // }, 500 );
+           
             }
 
             function singleLeave(){
@@ -1308,22 +1291,7 @@
 
             app.ticker.add(app.singleTowerLightAnimate);
 
-             
-
-            // singlhoverZone.beginFill(0xFF3300);
-            // singlhoverZone.moveTo(-244.0823211669922,-75.0487060546875);
-            // singlhoverZone.lineTo(-244.0823211669922,-75.0487060546875);
-
-            // // HQhoverZone.lineTo(217.60488891601562, -191.28219604492188)
-            // singlhoverZone.closePath();
-            // singlhoverZone.endFill();
-
-
-            // -883.4754333496094/25.12579345703125
-            // HQcont.height = 80;
-
-
-            // 204.36065673828125/50.336517333984375
+            
 
             var buttonOneCont = new PIXI.Container()
    
@@ -1578,33 +1546,25 @@
             .on('pointerout', removeTrainHover);
 
             app.trainHover = function(){
-                //
+             
 
-                // if(trainTower.y < 150){
-                //     trainTower.y = trainTower.y + 5;
-                // }
-                // if(trainHover.y > -50){
-                //     trainHover.y = trainHover.y - 5;
-                // }
 
-                // setTimeout(function(){
-                    //code goes here
                     if(trainButton.alpha < 1){
                         trainButton.alpha = trainButton.alpha + 0.09;
                     }
-                // }, 800); //Time before execution
+             
 
             }
             
             app.trainLeave = function(){
-                // setTimeout(function(){
+               
                     if(trainTower.y > 50){
                         trainTower.y = trainTower.y - 5;
                     }
                     if(trainHover.y < 225){
                         trainHover.y = trainHover.y + 5;
                     }
-                // }, 800); //Time before execution
+           
 
                 if(trainButton.alpha > 0){
                     trainButton.alpha = trainButton.alpha - 0.09;
@@ -1645,13 +1605,6 @@
             var yCanMoveTop = true;
             var yCanMoveDown = true;
 
-
-            // this.app.stage.addChild(mapCont);
-
-    //         map.interactive = true;
-
-    // // this button mode will mean the hand cursor appears when you roll over the bunny with your mouse
-    //         map.buttonMode = true;
 
             app.animationUpdateXright = function(delta) {
                 // 
@@ -1796,27 +1749,6 @@
             function onDragMove() {
 
 
-                // var checkCords = mapCont.getBounds();
-   
-
-
-
-                // check if you are hitting the container edge of the browser
-
-                // if(checkCords.x > 0){
-                //     xCanMoveRight = false;
-                // }
-
-                // if(checkCords.x <= 0 - mapCont._boundsRect.width / 2){
-                //     // xCanMoveLeft = false;
-                //     // app.ticker.add(app.animationUpdateXleft);
-                   
-                //     // app.ticker.remove(app.animationUpdateXleft);
-                //         // mapCont.interactive = true;
-                //         // mapCont.buttonMode = true;
-                //         // 
-                 
-                // }
 
 
                 
@@ -1824,47 +1756,7 @@
 
                 if (this.dragging) {
                     var newPosition = this.data.getLocalPosition(this.parent);
-
-                    // if(xCanMoveRight){
-                    //     this.x = newPosition.x;
-                    //     this.dragging = true
-                    //     // 
-                    //     // 
-                    //     mapCont.interactive = true;
-                    //     mapCont.buttonMode = true;
-
-                    // }else{
-                        
-                    //     app.ticker.add(app.animationUpdateXright);
-                    //     setTimeout (function(){
-                    //         app.ticker.remove(app.animationUpdateXright);
-                    //         xCanMoveRight = true;
-                    //         // mapCont.interactive = true;
-                    //         // mapCont.buttonMode = true;
-                    //         // 
-                    //     }, 400);
-                    // }
                     this.x = newPosition.x;
-
-                    // if(xCanMoveLeft){
-                    //     this.x = newPosition.x;
-                    //     this.dragging = true
-                    //     // 
-                    //     // 
-                    //     mapCont.interactive = true;
-                    //     mapCont.buttonMode = true;
-
-                    // }else{
-                        
-                    //     app.ticker.add(app.animationUpdateXleft);
-                    //     setTimeout (function(){
-                    //         app.ticker.remove(app.animationUpdateXleft);
-                    //         xCanMoveLeft = true;
-                    //         // mapCont.interactive = true;
-                    //         // mapCont.buttonMode = true;
-                    //         // 
-                    //     }, 400);
-                    // }
                     
                     this.y = newPosition.y;
                 }
@@ -2012,34 +1904,6 @@
 
             carOne.mask = longRoadMiddle;
 
-            // carOne.x = 948.6671447753906;
-            // carOne.y = -574.2612762451172
-            
-            // app.carOneMove = function(){
-            //     if(carOne.x > -1479.6444091796875){
-            //         carOne.x = carOne.x - (1 * 3);
-            //         carOne.alpha = 1;
-            //     }
-
-            //     if(carOne.y < 865.155029296875){
-            //         carOne.y = carOne.y + (0.57 * 3);
-            //     }
-
-            //     if(carOne.y > 865.155029296875 & carOne.x < -1479.6444091796875){
-            //         // carOne.alpha = 0;
-
-            //         setTimeout(function(){
-            //             //code goes here
-            //             carOne.x = 948.6671447753906;
-            //             carOne.y = -534.2612762451172
-            //         }, 1000); 
-            //     }
-            // }
-
-            // app.ticker.add(app.carOneMove);
-
-
-            // road short bottom
 
             const shortRoadBottom = new PIXI.Graphics();
 
@@ -2097,32 +1961,6 @@
             carThree.mask = shortRoadTop;
 
 
-            // app.carTwoMove = function(){
-
-            //     if(carTwo.x < -214.26077270507812){
-            //         carTwo.x = carTwo.x + (1 * 3);
-            //         carTwo.alpha = 1;
-            //     }
-
-            //     if(carTwo.y < 989.0693359375){
-            //         carTwo.y = carTwo.y + (0.57 * 3);
-            //     }
-            //     // -214.26077270507812/989.0693359375
-            //     if(carTwo.y > 989.0693359375 & carTwo.x > -214.26077270507812){
-            //         // carOne.alpha = 0;
-
-            //         setTimeout(function(){
-            //             //code goes here
-            //             carTwo.x = -1453.7776641845703;
-            //             carTwo.y = 259.0702209472656
-            //         }, 1000); 
-            //     }
-            // }
-
-            // app.ticker.add(app.carTwoMove);
-            // carTwo.x = -1453.7776641845703;
-            // carTwo.y = 259.0702209472656
-
             function resize() {
                 if (window.innerWidth / window.innerHeight >= ratio) {
                     var w = window.innerHeight * ratio;
@@ -2136,16 +1974,16 @@
             }
 
 
-            window.addEventListener('resize', function(event) {
-                // alert('hello');
-                // resize()
+            // window.addEventListener('resize', function(event) {
+            //     // alert('hello');
+            //     // resize()
 
-                // app.renderer.width = window.view.innerWidth;
-                // app.renderer.height = window.view.innerHeight;
+            //     // app.renderer.width = window.view.innerWidth;
+            //     // app.renderer.height = window.view.innerHeight;
 
-                // const app = new PIXI.Application({transparent: true,  width: window.innerWidth, height: window.innerHeight });
+            //     // const app = new PIXI.Application({transparent: true,  width: window.innerWidth, height: window.innerHeight });
 
-            }, true);
+            // }, true);
 
             
             if(window.innerWidth < 845){
